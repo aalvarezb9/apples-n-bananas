@@ -30,9 +30,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/aos/dist/aos.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -90,12 +95,20 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/aos/dist/aos.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8376393f-c2ec-4cf2-a63e-870425424d66"
   }
 }

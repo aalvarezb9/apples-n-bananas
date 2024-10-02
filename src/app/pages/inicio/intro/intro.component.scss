@@ -1,0 +1,39 @@
+.intro {
+  padding-top: 130px;
+}
+
+.logo {
+  width: fit-content;
+}
+
+.descripcion {
+  font-family: "DJB";
+  font-size: xx-large;
+}
+.animacion {
+  .palabras,
+  .blinking-cursor {
+    font-size: 100px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-cursor {
+  -webkit-animation: blink 1s step-end infinite;
+  -moz-animation: blink 1s step-end infinite;
+  -ms-animation: blink 1s step-end infinite;
+  -o-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+  font-family: "DJB" !important;
+}

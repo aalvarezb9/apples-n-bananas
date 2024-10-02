@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+body,
+* {
+  max-width: 100% !important;
+}
+
+@font-face {
+  font-family: "ComicTypeBold";
+  src: local("ComicTypeBold"),
+    url("./fonts/Comic-Type-Bold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "DJB";
+  src: local("DJB"), url("./fonts/DJB-Number-2-Pencil.ttf") format("truetype");
+  font-weight: bolder;
+}
+
+body {
+  font-family: "ComicTypeBold" !important;
+  color: #2b75a2 !important;
+  max-width: 100% !important;
+}
+
+.ancho-fit {
+  width: fit-content;
+}
+
+.seccion {
+  min-height: 100vh;
+  max-height: fit-content;
+  margin-bottom: 20px;
+}

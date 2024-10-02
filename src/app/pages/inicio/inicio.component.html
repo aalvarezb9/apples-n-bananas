@@ -1,0 +1,10 @@
+<main>
+  <div class="seccion">
+    <app-intro (modalCerrada)="cargarPaginaCompleta = true" />
+  </div>
+  @defer (when cargarPaginaCompleta) {
+  <div class="seccion"><app-palabras /></div>
+  <div class="seccion"><app-cuento /></div>
+  <div class="seccion"><app-i-love-apples /></div>
+  }
+</main>

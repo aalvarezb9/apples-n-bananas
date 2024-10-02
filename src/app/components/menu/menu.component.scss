@@ -1,0 +1,12 @@
+.titulo {
+  font-family: "DJB";
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.menu-item {
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,54 @@
+<div class="row ancho-fit mx-auto">
+  @for (item of items; track $index) { @if (elementoSeleccionado === -1) {
+  <div
+    class="col-md-3 col-sm-6"
+    [attr.data-aos]="!nPaquetesVisto ? 'fade-up' : ''"
+    [attr.data-aos-delay]="!nPaquetesVisto ? $index * 500 : 0"
+  >
+    <div
+      class="d-flex flex-column justify-content-center align-items-center text-center menu-item"
+      (click)="seleccionarElemento($index)"
+    >
+      <img
+        src="{{ item.img }}"
+        alt="{{ item.titulo }}"
+        height="160"
+        width="160"
+      />
+      <p class="titulo">{{ item.titulo }}</p>
+    </div>
+  </div>
+  } @if (elementoSeleccionado === $index) {
+  <div
+    class="col-md-12 d-flex justify-content-center"
+    [attr.data-aos]="$index < 2 ? 'fade-right' : 'fade-left'"
+  >
+    <div
+      class="d-flex flex-column justify-content-center align-items-center text-center menu-item"
+      (click)="elementoSeleccionado = -1"
+    >
+      <img
+        src="{{ item.img }}"
+        alt="{{ item.titulo }}"
+        height="160"
+        width="160"
+      />
+      <p class="titulo">{{ item.titulo }}</p>
+    </div>
+  </div>
+  <div class="row">
+    @for (p of item.paquetes; track $index) {
+    <div
+      class="{{
+        'col-md-' +
+          12 / (item.paquetes?.length || 1) +
+          ' col-sm-12' +
+          ' ancho-fit mx-auto'
+      }}"
+    >
+      <app-card [imagen]="p.img" />
+    </div>
+    }
+  </div>
+  } }
+</div>

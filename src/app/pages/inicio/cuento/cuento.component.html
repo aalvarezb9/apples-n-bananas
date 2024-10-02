@@ -1,0 +1,82 @@
+<div class="cuento" id="cuento">
+  @if (pagina === 1) {
+  <div class="row">
+    <div class="col-md-6 col-sm-12 order-md-1 order-sm-2">
+      <img
+        class="img-cuento"
+        src="../../../../assets/images/manzana.png"
+        alt=""
+      />
+    </div>
+    <div
+      class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center order-md-2 order-sm-1"
+    >
+      <h1 class="titulo">Érase una vez...</h1>
+      <p class="historia">
+        Comienza como un emocionante recuerdo de la famosa canción “Apples and
+        Bananas” que escuchábamos y cantábamos a diario con mucha alegría en
+        nuestra etapa de prescolar.
+      </p>
+    </div>
+    <div
+      class="col-md-12 col-sm-12 d-flex justify-content-end order-md-3 order-sm-3"
+    >
+      <img
+        class="flecha"
+        src="../../../../assets/images/flecha.png"
+        alt=""
+        srcset=""
+        height="45"
+        width="45"
+        (click)="deslizarHaciaArriba(); pagina = 2"
+      />
+    </div>
+  </div>
+  } @else {
+  <div class="row d-flex">
+    <div class="col-md-6 col-sm-12 d-flex align-items-stretch">
+      <img
+        class="img-cuento"
+        src="../../../../assets/images/banano.png"
+        alt=""
+      />
+    </div>
+    <div
+      class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center"
+    >
+      <h1 class="titulo">...</h1>
+      <p class="historia">
+        Después de un profundo análisis al nombre, su significado se tornó en
+        algo muy especial y significativo para nosotras. Las frutas son diversas
+        en tamaños, sabores y colores; Lo mismo sucede con los niños dentro del
+        aprendizaje. No todos los niños serán apples (manzanas), ni tampoco
+        serán bananas (mínimos) ya que existe una mezcla de ellos. También
+        habrá, kiwis, mangos, naranjas, etcétera. Utilizando el ejemplo de las
+        frutas, queremos referirnos a la idea que, dentro del aprendizaje, los
+        niños también son diferentes, desde la forma en la que aprenden hasta en
+        sus capacidades y habilidades. ¡Ser diferente es GENIAL! Después de un
+        profundo análisis al nombre, su significado se tornó en algo muy
+        especial y significativo para nosotras. Las frutas son diversas en
+        tamaños, sabores y colores; Lo mismo sucede con los niños dentro del
+        aprendizaje. No todos los niños serán apples (manzanas), ni tampoco
+        serán bananas (mínimos) ya que existe una mezcla de ellos. También
+        habrá, kiwis, mangos, naranjas, etcétera. Utilizando el ejemplo de las
+        frutas, queremos referirnos a la idea que, dentro del aprendizaje, los
+        niños también son diferentes, desde la forma en la que aprenden hasta en
+        sus capacidades y habilidades. ¡Ser diferente es GENIAL!
+      </p>
+    </div>
+    <div class="col-md-12 col-sm-12 d-flex align-items-stretch">
+      <img
+        class="flecha flecha-izq"
+        src="../../../../assets/images/flecha.png"
+        alt=""
+        srcset=""
+        height="45"
+        width="45"
+        (click)="deslizarHaciaArriba(); pagina = 1"
+      />
+    </div>
+  </div>
+  }
+</div>

@@ -1,0 +1,21 @@
+.contenedor-palabras {
+  background-image: url("../../../../assets/images/palabras.png");
+  background-size: cover; /* Asegura que la imagen cubra todo el div */
+  background-position: center; /* Centra la imagen en el div */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  display: flex; /* Para centrar el contenido interno */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  color: white; /* Color del texto para contrastar con la imagen de fondo */
+  text-align: center;
+  height: 100vh; /* Altura completa de la pantalla */
+  width: 100%; /* Ancho completo */
+  min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la pantalla */
+}
+
+@media (max-width: 768px) {
+  .contenedor-palabras {
+    height: auto; /* Ajusta la altura automáticamente en pantallas pequeñas */
+    min-height: 100vh; /* Asegura una altura mínima para pantallas pequeñas */
+  }
+}

@@ -1,0 +1,33 @@
+.cuento {
+  min-height: fit-content !important;
+}
+.contenido-cuento {
+  padding: 50%;
+}
+.historia {
+  font-family: "DJB";
+  width: 80%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+.titulo {
+  font-size: 60px;
+  font-weight: bolder;
+}
+.flecha-izq {
+  transform: scaleX(-1);
+}
+.flecha {
+  z-index: 1 !important;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+img {
+  max-height: 100%;
+}
+.img-cuento {
+  min-width: 100% !important;
+}

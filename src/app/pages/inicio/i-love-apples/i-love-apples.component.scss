@@ -1,0 +1,10 @@
+.i-love-apples {
+  padding-top: 35vh;
+}
+.flecha {
+  z-index: 1 !important;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
