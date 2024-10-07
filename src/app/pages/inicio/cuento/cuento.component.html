@@ -1,17 +1,19 @@
-<div class="cuento" id="cuento">
+<div class="cuento" id="cuento" style="border: 1px solid red; width: 100%!important; height: 100%!important;">
   @if (pagina === 1) {
   <div class="row">
-    <div class="col-md-6 col-sm-12 order-md-1 order-sm-2">
+    <div class="col-md-6 col-sm-12 order-2" style="padding: 0;">
       <img
         class="img-cuento"
         src="../../../../assets/images/manzana.png"
-        alt=""
+        style="border: 1px solid black"
+        alt="Manzana"
       />
     </div>
     <div
-      class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center order-md-2 order-sm-1"
+      class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center order-1 mx-auto"
+      style="border: 1px solid red; padding: 0;"
     >
-      <h1 class="titulo">Érase una vez...</h1>
+      <h1 class="titulo" style="border: 1px solid black;">Érase una vez...</h1>
       <p class="historia">
         Comienza como un emocionante recuerdo de la famosa canción “Apples and
         Bananas” que escuchábamos y cantábamos a diario con mucha alegría en
@@ -19,13 +21,12 @@
       </p>
     </div>
     <div
-      class="col-md-12 col-sm-12 d-flex justify-content-end order-md-3 order-sm-3"
+      class="col-md-12 col-sm-12 d-flex justify-content-end order-3"
     >
       <img
         class="flecha"
         src="../../../../assets/images/flecha.png"
-        alt=""
-        srcset=""
+        alt="Flecha"
         height="45"
         width="45"
         (click)="deslizarHaciaArriba(); pagina = 2"
@@ -38,7 +39,7 @@
       <img
         class="img-cuento"
         src="../../../../assets/images/banano.png"
-        alt=""
+        alt="Banano"
       />
     </div>
     <div
@@ -70,7 +71,7 @@
       <img
         class="flecha flecha-izq"
         src="../../../../assets/images/flecha.png"
-        alt=""
+        alt="Flecha"
         srcset=""
         height="45"
         width="45"

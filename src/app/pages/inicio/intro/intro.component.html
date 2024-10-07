@@ -1,4 +1,4 @@
-<div class="intro">
+<div class="intro" [ngStyle]="{ 'padding' : isMobileView ? '20vh 10% 0 10%' : '' }">
   <app-modal
     [show]="showModal"
     (onClose)="showModal = false; this.empezarAnimacion()"
@@ -6,19 +6,16 @@
   >
     <img
       src="../../../../assets/images/bienvenida.png"
-      alt=""
-      srcset=""
-      style="height: fit-content"
-      [style]="{ height: '550px', width: '600px' }"
+      alt="Logo de bienvenida"
+      width="100%"
     />
   </app-modal>
   @defer {
   <div class="logo row mx-auto" data-aos="fade-down">
     <img
       src="../../../../assets/logos/logo_oficial.png"
-      alt=""
-      srcset=""
-      height="300"
+      alt="Logo apples"
+      [attr.height]="isMobileView ? '100' : '300'"
     />
   </div>
   <div class="row">
@@ -27,8 +24,8 @@
     </div>
   </div>
   }
-  <div class="row animacion" data-aos="fade-up">
-    <div class="col-md-12 col-sm-12 ancho-fit mx-auto palabras">
+  <div class="row animacion mx-auto" data-aos="fade-up">
+    <div class="col-md-12 col-sm-12 ancho-fit mx-auto palabras" [ngClass]="{ 'reduce' : isMobileView }">
       {{ currentText }} <span class="blinking-cursor">_</span>
     </div>
   </div>
