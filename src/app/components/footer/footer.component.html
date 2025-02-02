@@ -1,1 +1,43 @@
-<p>footer works!</p>
+<footer class="app-footer">
+    <div class="container py-4">
+      <div class="row mx-auto" style="width: 100%;">
+  
+        <!-- Columna Izquierda: Logo y Datos -->
+        <div class="col-12 col-md-4 d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
+          <div class="mx-auto">
+            <!-- Logo o imagen -->
+            <img src="../../../assets/logos/LOGO_ApplesNBananas.png" alt="Apples N' Bananas" class="footer-logo mb-2" />
+    
+            <!-- Contacto -->
+            <p class="mb-0 anchor" (click)="openEmail()">{{ contactInfo.email }}</p>
+            <p class="anchor" (click)="call()">{{ contactInfo.phone }}</p>
+          </div>
+        </div>
+  
+        <!-- Columna Central: Enlaces -->
+        <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-4 mb-md-0 pt-4 text-align-start">
+            @for (link of links; track $index) {
+              <a [routerLink]="['/']" fragment="{{link.url}}" style="text-align: start;" class="footer-link w-50 text-start">{{ link.label }}</a>
+            }
+        </div>
+  
+        <!-- Columna Derecha: Redes Sociales -->
+        <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+          <div class="socials d-flex justify-content-center mb-2 pt-5">
+            @for (social of socials; track $index) {
+              <div class="icon-container mx-1">
+                <a [href]="social.url" class="social-icon px-2" target="_blank" rel="noopener">
+                  <i [class]="social.icon"></i>
+                </a>
+              </div>
+            }
+          </div>
+          <p class="copyright">
+            ©{{ currentYear }} {{ contactInfo.brand }}
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </footer>
+  

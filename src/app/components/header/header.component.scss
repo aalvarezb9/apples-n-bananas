@@ -1,0 +1,113 @@
+// Variables
+$primary-color: #2B75A2;
+$background-color: white;
+$menu-transition: 0.5s ease-in-out;
+$menu-item-size: 200px; // Tamaño de las imágenes
+
+// Header fijo
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 1000;
+}
+
+// Botón de menú
+.menu-btn {
+  background: none;
+  border: none;
+  color: $primary-color;
+  font-size: 36px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Menú de pantalla completa
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform $menu-transition;
+  z-index: 2000;
+  border-bottom: 1px solid black;
+
+  &.open {
+    transform: translateY(0);
+  }
+
+  // Botón de cierre
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: $primary-color;
+    font-size: 48px;
+    cursor: pointer;
+  }
+
+  // Contenedor del menú usando Bootstrap Grid
+  .menu-container {
+    width: 90%; // 90% del ancho de la pantalla
+  }
+
+  // Estilos de los ítems del menú
+  .menu-item {
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+
+    img {
+    //   width: $menu-item-size;
+    //   height: $menu-item-size - 40px;
+      width: 45%;
+      height: 40%;
+      transition: opacity $menu-transition;
+    }
+
+    .hover {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0; // Oculto por defecto
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 45px;
+      font-weight: bold;
+      color: $primary-color;
+      transition: opacity $menu-transition;
+    }
+
+    &:hover {
+      .normal {
+        opacity: 0;
+      }
+      .hover {
+        opacity: 1; // Mostrar la imagen en hover
+      }
+      p {
+        opacity: 0; // Ocultar texto en hover
+      }
+    }
+  }
+}

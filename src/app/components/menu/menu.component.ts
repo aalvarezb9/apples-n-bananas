@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
   items: MenuItem[] = [
     { img: '../../../assets/images/tutorias.png', titulo: 'Tutorías', paquetes: [{ img: '../../../assets/images/Paquete1.jpg' }, { img: '../../../assets/images/Paquete2.jpg' }, { img: '../../../assets/images/Paquete3.jpg' }] },
     { img: '../../../assets/images/estimulacion-temprana.png', titulo: 'Estimulación Temprana', paquetes: [{ img: '../../../assets/images/Paquete4.jpg' }] },
-    { img: '../../../assets/images/abordaje-emocional.png', titulo: 'Abordaje Emocional', paquetes: [{ img: '../../../assets/images/Paquete5.jpg' }] },
+    { img: '../../../assets/images/abordaje-emocional.png', titulo: 'Terapia Emocional', paquetes: [{ img: '../../../assets/images/Paquete5.jpg' }] },
     { img: '../../../assets/images/talleres.png', titulo: 'Talleres', paquetes: [{ img: '../../../assets/images/Paquete6.jpg' }] },
   ];
   elementoSeleccionado: number = -1;
@@ -37,4 +37,15 @@ export class MenuComponent implements OnInit {
     this.elementoSeleccionado = i;
     this.nPaquetesVisto++;
   }
+
+  getRows(paquetes: any[] | undefined, size = 3): MenuItem[][] {
+    const rows: MenuItem[][] = [];
+    if (paquetes) {
+      for (let i = 0; i < paquetes.length; i += size) {
+        rows.push(paquetes.slice(i, i + size));
+      }
+    }
+    return rows;
+  }
+  
 }

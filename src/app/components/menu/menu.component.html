@@ -21,7 +21,6 @@
   } @if (elementoSeleccionado === $index) {
   <div
     class="col-md-12 d-flex justify-content-center"
-    [attr.data-aos]="$index < 2 ? 'fade-right' : 'fade-left'"
   >
     <div
       class="d-flex flex-column justify-content-center align-items-center text-center menu-item"
@@ -36,15 +35,16 @@
       <p class="titulo">{{ item.titulo }}</p>
     </div>
   </div>
-  <div class="row">
+  <div class="row justify-content-center" style="gap: 10px">
     @for (p of item.paquetes; track $index) {
     <div
+      style="width: 18rem"
       class="{{
         'col-md-' +
           12 / (item.paquetes?.length || 1) +
           ' col-sm-12' +
-          ' ancho-fit mx-auto'
-      }}"
+          ''
+        }}"
     >
       <app-card [imagen]="p.img" />
     </div>

@@ -2,14 +2,13 @@
   <app-modal [show]="showModal" [bgColor]="'gray'" (onClose)="cerrarModal()">
     <app-carousel [images]="images" />
   </app-modal>
-  <div class="row">
-    <div class="col-md-12 col-sm-12 ancho-fit mx-auto" style="width: 70%">
+  <div class="row mx-auto">
+    <div class="col-md-12 col-sm-12 ancho-fit mx-auto">
       <img src="../../../../assets/images/i_love_apples.png" alt="" />
     </div>
   </div>
   @defer {
   <app-menu />
-  @if (mostrarFlecha) {
   <div class="row">
     <div
       class="col-md-12 col-sm-12 d-flex justify-content-end order-md-3 order-sm-3"
@@ -19,11 +18,11 @@
         src="../../../../assets/images/flecha.png"
         alt=""
         srcset=""
-        height="45"
-        width="45"
+        height="50"
+        width="50"
         (click)="abrirModal()"
       />
     </div>
   </div>
-  } }
+  }
 </div>

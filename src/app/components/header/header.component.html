@@ -1,1 +1,37 @@
-<p>header works!</p>
+<header class="header">
+    <button class="menu-btn" (click)="toggleMenu()">
+        <i class="bi bi-list"></i>
+    </button>
+</header>
+  
+  @if (menuOpen) {
+      <div class="fullscreen-menu" [class.open]="menuOpen">
+        <button class="close-btn" (click)="toggleMenu()">&times;</button>
+      
+        <div class="container menu-container">
+          <div class="row text-center">
+            <div class="col-12 col-md-3 menu-item" (click)="navigateTo('home')">
+              <img src="../../../assets/images/Home.png" class="normal" alt="Inicio">
+              <img src="../../../assets/images/Home2.png" class="hover" alt="Inicio">
+              <p class="normal">Home</p>
+            </div>
+            <div class="col-12 col-md-3 menu-item" (click)="navigateTo('nuestra-historia')">
+              <img src="../../../assets/images/NuestraHistoria.png" class="normal" alt="Perfil">
+              <img src="../../../assets/images/NuestraHistoria2.png" class="hover" alt="Perfil">
+              <p class="normal">Nuestra historia</p>
+            </div>
+            <div class="col-12 col-md-3 menu-item" (click)="navigateTo('paquetes')">
+              <img src="../../../assets/images/Queofrecemos.png" class="normal" alt="Configuración">
+              <img src="../../../assets/images/Queofrecemos2.png" class="hover" alt="Configuración">
+              <p class="normal">Que ofrecemos</p>
+            </div>
+            <div class="col-12 col-md-3 menu-item">
+              <img src="../../../assets/images/Paquetes.png" class="normal" alt="Cerrar sesión">
+              <img src="../../../assets/images/Paquetes2.png" class="hover" alt="Cerrar sesión">
+              <p class="normal">Paquetes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  }
+  

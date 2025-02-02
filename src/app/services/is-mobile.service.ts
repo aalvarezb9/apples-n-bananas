@@ -10,7 +10,6 @@ export class IsMobileService {
   isMobileView$ = this.isMobileView.asObservable();
 
   changeView(isMobileView: boolean): void {
-    console.log('cambió', isMobileView)
     this.isMobileView.next(isMobileView);
   }
 }
