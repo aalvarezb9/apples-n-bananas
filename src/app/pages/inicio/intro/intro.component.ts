@@ -35,13 +35,14 @@ export class IntroComponent implements OnInit {
     this.isMobileService.isMobileView$.subscribe((isMobileView) => {
       this.isMobileView = isMobileView;
     });
+
+    this.imagesLoadedService.allImagesLoaded$.subscribe((allLoaded) => {
+      this.isLoadingImages = !allLoaded;
+    });
   }
 
   empezarAnimacion(): void {
     this.showModal = false;
-    this.imagesLoadedService.allImagesLoaded$.subscribe((allLoaded) => {
-      this.isLoadingImages = !allLoaded;
-    });
     this.textAnimationService.animateText(this.phrases).subscribe((text) => {
       this.currentText = text;
     });

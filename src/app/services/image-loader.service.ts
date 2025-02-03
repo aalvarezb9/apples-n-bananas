@@ -18,6 +18,6 @@ export class ImagesLoadedService {
 
   imageLoaded() {
     this.loadedImages++;
-    if (this.loadedImages === this.totalImages && this.totalImages > 0) this.allImagesLoadedSubject.next(true);
+    this.allImagesLoadedSubject.next(this.loadedImages === this.totalImages && this.totalImages > 0);
   }
 }
