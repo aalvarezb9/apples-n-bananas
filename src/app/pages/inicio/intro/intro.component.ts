@@ -40,7 +40,7 @@ export class IntroComponent implements OnInit {
   empezarAnimacion(): void {
     this.showModal = false;
     this.imagesLoadedService.allImagesLoaded$.subscribe((allLoaded) => {
-      if (allLoaded) this.isLoadingImages = false;
+      this.isLoadingImages = !allLoaded;
     });
     this.textAnimationService.animateText(this.phrases).subscribe((text) => {
       this.currentText = text;
