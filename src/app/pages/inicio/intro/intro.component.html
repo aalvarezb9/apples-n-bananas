@@ -1,10 +1,11 @@
 <div class="intro" [ngStyle]="{ 'padding' : isMobileView ? '20vh 10% 0 10%' : '' }">
   <app-modal
     [show]="showModal"
-    (onClose)="showModal = false; this.empezarAnimacion()"
+    (onClose)="this.empezarAnimacion()"
     [bgColor]="bgColor"
   >
     <img
+      appImageLoader
       src="../../../../assets/images/saludo.png"
       alt="Logo de bienvenida"
       width="100%"
@@ -13,6 +14,7 @@
   @defer {
   <div class="logo row mx-auto" data-aos="fade-down">
     <img
+      appImageLoader
       src="../../../../assets/logos/logo_oficial.png"
       alt="Logo apples"
       [attr.height]="isMobileView ? '100' : '300'"
@@ -30,3 +32,7 @@
     </div>
   </div>
 </div>
+
+@if (!showModal && isLoadingImages) {
+  <app-loader />
+}

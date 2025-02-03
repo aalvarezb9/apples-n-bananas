@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { ImageLoaderDirective } from '../../directives/image-loader.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [ImageLoaderDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

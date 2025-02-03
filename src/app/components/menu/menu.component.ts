@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos';
 import { CardComponent } from '../card/card.component';
+import { ImageLoaderDirective } from '../../directives/image-loader.directive';
 
 interface MenuItem {
   img: string;
@@ -12,7 +13,7 @@ interface MenuItem {
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule, CardComponent],
+  imports: [CommonModule, CardComponent, ImageLoaderDirective],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })

@@ -3,11 +3,14 @@ import { ModalComponent } from '../../../components/modal/modal.component';
 import { TextAnimationService } from '../../../services/text-animation.service';
 import { CommonModule } from '@angular/common';
 import { IsMobileService } from '../../../services/is-mobile.service';
+import { ImageLoaderDirective } from '../../../directives/image-loader.directive';
+import { ImagesLoadedService } from '../../../services/image-loader.service';
+import { LoaderComponent } from '../../../components/loader/loader.component';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [ModalComponent, CommonModule],
+  imports: [ModalComponent, CommonModule, ImageLoaderDirective, LoaderComponent],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss'
 })
@@ -24,16 +27,21 @@ export class IntroComponent implements OnInit {
   isMobileView!: boolean;
   private readonly textAnimationService = inject(TextAnimationService);
   private readonly isMobileService = inject(IsMobileService);
+  private readonly imagesLoadedService = inject(ImagesLoadedService);
   modalCerrada = output<void>();
+  isLoadingImages = true;
 
   ngOnInit(): void {
     this.isMobileService.isMobileView$.subscribe((isMobileView) => {
-      console.log('cambio interno', isMobileView)
       this.isMobileView = isMobileView;
     });
   }
 
   empezarAnimacion(): void {
+    this.showModal = false;
+    this.imagesLoadedService.allImagesLoaded$.subscribe((allLoaded) => {
+      if (allLoaded) this.isLoadingImages = false;
+    });
     this.textAnimationService.animateText(this.phrases).subscribe((text) => {
       this.currentText = text;
     });

@@ -2,7 +2,6 @@
     .anchor {
       &:hover {
         cursor: pointer;
-        text-decoration: underline;
       }
     }
 
@@ -20,7 +19,7 @@
       color: #5382a1;
       margin: 0.25rem 0;
       &:hover {
-        text-decoration: underline;
+        cursor: pointer;
       }
     }
   

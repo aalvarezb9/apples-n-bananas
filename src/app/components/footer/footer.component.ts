@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ImageLoaderDirective } from '../../directives/image-loader.directive';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, ImageLoaderDirective],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

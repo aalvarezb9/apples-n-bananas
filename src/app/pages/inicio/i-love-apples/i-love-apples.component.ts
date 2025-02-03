@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { MenuComponent } from '../../../components/menu/menu.component';
 import { ModalComponent } from '../../../components/modal/modal.component';
 import { CarouselComponent } from '../../../components/carousel/carousel.component';
+import { ImageLoaderDirective } from '../../../directives/image-loader.directive';
 
 @Component({
   selector: 'app-i-love-apples',
   standalone: true,
-  imports: [MenuComponent, ModalComponent, CarouselComponent],
+  imports: [MenuComponent, ModalComponent, CarouselComponent, ImageLoaderDirective],
   templateUrl: './i-love-apples.component.html',
   styleUrl: './i-love-apples.component.scss'
 })

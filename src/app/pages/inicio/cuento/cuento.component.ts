@@ -1,11 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { IsMobileService } from '../../../services/is-mobile.service';
 import { CommonModule } from '@angular/common';
+import { ImageLoaderDirective } from '../../../directives/image-loader.directive';
 
 @Component({
   selector: 'app-cuento',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ImageLoaderDirective],
   templateUrl: './cuento.component.html',
   styleUrl: './cuento.component.scss'
 })

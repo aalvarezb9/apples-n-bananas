@@ -10,6 +10,7 @@
       (click)="seleccionarElemento($index)"
     >
       <img
+        appImageLoader
         src="{{ item.img }}"
         alt="{{ item.titulo }}"
         height="160"
@@ -27,6 +28,7 @@
       (click)="elementoSeleccionado = -1"
     >
       <img
+        appImageLoader
         src="{{ item.img }}"
         alt="{{ item.titulo }}"
         height="160"

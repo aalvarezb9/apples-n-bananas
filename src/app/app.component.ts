@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   screenWidth!: number;
   isMobileView!: boolean;
   title = 'Apples & Bananas';
+  isLoadingImages = false;
 
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
