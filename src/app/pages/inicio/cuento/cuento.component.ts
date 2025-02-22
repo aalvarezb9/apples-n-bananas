@@ -23,7 +23,7 @@ export class CuentoComponent implements OnInit {
 
   deslizarHacia(id: string): void {
     setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('cuento-id')?.scrollIntoView({ behavior: 'smooth' });
     }, 10);
   }
 }
