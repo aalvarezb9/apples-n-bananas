@@ -43,7 +43,6 @@ export class MenuComponent implements OnInit {
       once: true
     });
 
-    this.modalOpen = false;
     this.isMobileViewService.isMobileView$.subscribe((isMobileView) => {
       if (this.isMobileView !== isMobileView) {
         this.isMobileView = isMobileView;
