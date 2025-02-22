@@ -21,4 +21,9 @@ export class HeaderComponent {
     this.toggleMenu();
     this.router.navigate(['/'], { fragment });
   }
+
+  goTo(url: string): void {
+    this.toggleMenu();
+    window.open(url, '_blank');
+  }
 }

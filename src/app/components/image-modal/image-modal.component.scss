@@ -1,0 +1,45 @@
+// Ajusta el contenedor del modal para que no tenga bordes ni fondo
+::ng-deep .modal-backdrop.show {
+  opacity: 0 !important;
+  z-index: -1 !important;
+}
+
+.modal {
+  height: 100vh;
+}
+
+.modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  height: 90%;
+}
+
+// Ajusta el modal para que la imagen se vea correctamente
+.modal-dialog {
+  max-width: 90vw; // Limita el ancho máximo del modal al 90% del viewport
+  margin: auto;
+}
+
+// Ajusta el cuerpo del modal para eliminar márgenes y centrar la imagen
+.modal-body {
+  padding: 0;
+  position: relative;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+// La imagen ocupará el ancho del modal sin exceder su tamaño original
+.modal img {
+  max-width: 100%; // La imagen no se sobrepasará del modal
+  max-height: 90vh; // Evita que la imagen se extienda demasiado en altura
+  object-fit: contain; // Mantiene la relación de aspecto de la imagen
+  display: block;
+}
+
+img {
+  &:hover {
+    cursor: pointer;
+  }
+}

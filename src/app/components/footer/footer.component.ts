@@ -19,10 +19,10 @@ export class FooterComponent {
   };
 
   links = [
-    { label: 'Home', url: 'home' },
-    { label: 'Nuestra Historia', url: 'nuestra-historia' },
-    { label: 'Que ofrecemos', url: 'paquetes' },
-    { label: 'Paquetes', url: 'paquetes' },
+    { label: 'Home', url: 'home', slide: true },
+    { label: 'Nuestra Historia', url: 'nuestra-historia', slide: true },
+    { label: 'Que ofrecemos', url: 'paquetes', slide: true },
+    { label: 'Paquetes', url: 'https://drive.google.com/file/d/1vRP_QCFkweeH65qGgKTYKXXC1PvyX3xx/view?usp=drive_link', slide: false },
   ];
 
   socials = [

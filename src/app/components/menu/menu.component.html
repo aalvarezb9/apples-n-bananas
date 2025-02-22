@@ -7,7 +7,7 @@
   >
     <div
       class="d-flex flex-column justify-content-center align-items-center text-center menu-item"
-      (click)="seleccionarElemento($index)"
+      (click)="openImageModal($index)"
     >
       <img
         appImageLoader
@@ -19,38 +19,8 @@
       <p class="titulo">{{ item.titulo }}</p>
     </div>
   </div>
-  } @if (elementoSeleccionado === $index) {
-  <div
-    class="col-md-12 d-flex justify-content-center"
-  >
-    <div
-      class="d-flex flex-column justify-content-center align-items-center text-center menu-item"
-      (click)="elementoSeleccionado = -1"
-    >
-      <img
-        appImageLoader
-        src="{{ item.img }}"
-        alt="{{ item.titulo }}"
-        height="160"
-        width="160"
-      />
-      <p class="titulo">{{ item.titulo }}</p>
-    </div>
-  </div>
-  <div class="row justify-content-center" style="gap: 10px">
-    @for (p of item.paquetes; track $index) {
-    <div
-      style="width: 18rem"
-      class="{{
-        'col-md-' +
-          12 / (item.paquetes?.length || 1) +
-          ' col-sm-12' +
-          ''
-        }}"
-    >
-      <app-card [imagen]="p.img" />
-    </div>
-    }
-  </div>
-  } }
+  } 
+}
 </div>
+
+<app-image-modal />

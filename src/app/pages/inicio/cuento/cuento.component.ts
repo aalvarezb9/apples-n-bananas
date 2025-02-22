@@ -21,7 +21,9 @@ export class CuentoComponent implements OnInit {
     });
   }
 
-  deslizarHaciaArriba(): void {
-    document.getElementById('cuento')?.scrollIntoView({ behavior: 'smooth' });
+  deslizarHacia(id: string): void {
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 10);
   }
 }

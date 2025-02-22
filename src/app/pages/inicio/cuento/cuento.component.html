@@ -1,6 +1,6 @@
 <div class="cuento" style="width: 100%!important; height: 100%!important;">
   @if (pagina === 1) {
-  <div class="row" style="margin-left: 0!important; margin-right: 0!important;">
+  <div id="inicio-cuento" class="row" style="margin-left: 0!important; margin-right: 0!important;">
     <div class="col-md-6 col-sm-12 order-2" style="padding-left: 0 !important; padding-right: 0!important;">
       <img
         appImageLoader
@@ -30,12 +30,12 @@
         alt="Flecha"
         height="50"
         width="50"
-        (click)="deslizarHaciaArriba(); pagina = 2"
+        (click)="deslizarHacia('fin-cuento'); pagina = 2"
       />
     </div>
   </div>
   } @else {
-  <div class="row d-flex" style="margin-left: 0!important; margin-right: 0!important;">
+  <div id="fin-cuento" class="row d-flex" style="margin-left: 0!important; margin-right: 0!important;">
     <div class="col-md-6 col-sm-12 d-flex align-items-stretch" style="padding-right: 0!important; padding-left: 0!important;">
       <img 
         appImageLoader
@@ -78,7 +78,7 @@
         srcset=""
         height="50"
         width="50"
-        (click)="deslizarHaciaArriba(); pagina = 1"
+        (click)="pagina = 1; deslizarHacia('inicio-cuento')"
       />
     </div>
   </div>

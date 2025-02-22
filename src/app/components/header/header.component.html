@@ -9,7 +9,7 @@
         <button class="close-btn" (click)="toggleMenu()">&times;</button>
       
         <div class="container menu-container">
-          <div class="row text-center g-5">
+          <div class="row text-center g-5" style="margin: 0 auto!important;">
             <div class="col-6 col-md-3 menu-item" (click)="navigateTo('home')">
               <img appImageLoader src="../../../assets/images/Home.png" class="normal" alt="Inicio">
               <img appImageLoader src="../../../assets/images/Home2.png" class="hover" alt="Inicio">
@@ -25,9 +25,9 @@
               <img appImageLoader src="../../../assets/images/Queofrecemos2.png" class="hover" alt="Configuración">
               <p class="normal">Que ofrecemos</p>
             </div>
-            <div class="col-6 col-md-3 menu-item">
-              <img appImageLoader src="../../../assets/images/Paquetes.png" class="normal" alt="Cerrar sesión">
-              <img appImageLoader src="../../../assets/images/Paquetes2.png" class="hover" alt="Cerrar sesión">
+            <div (click)="goTo('https://drive.google.com/file/d/1vRP_QCFkweeH65qGgKTYKXXC1PvyX3xx/view?usp=drive_link')" class="col-6 col-md-3 menu-item">
+              <img appImageLoader src="../../../assets/images/Paquetes.png" class="normal" alt="Paquetes">
+              <img appImageLoader src="../../../assets/images/Paquetes2.png" class="hover" alt="Paquetes">
               <p class="normal">Paquetes</p>
             </div>
           </div>
