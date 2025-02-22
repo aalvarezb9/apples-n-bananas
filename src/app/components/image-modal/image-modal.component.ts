@@ -1,6 +1,5 @@
 import { Component, Input, output } from '@angular/core';
 
-
 declare var bootstrap: any;
 
 @Component({
