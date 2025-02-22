@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, output } from '@angular/core';
 
 
 declare var bootstrap: any;
@@ -13,6 +13,7 @@ declare var bootstrap: any;
 export class ImageModalComponent {
   @Input() imageUrl = '';
   @Input() index!: number;
+  onCloseModal = output();
 
   closeModal() {
     const modalElement = document.getElementById('imageModal');
@@ -20,6 +21,7 @@ export class ImageModalComponent {
       const modal = bootstrap.Modal.getInstance(modalElement);
       if (modal) {
         modal.hide();
+        this.onCloseModal.emit();
       }
     }
   }

@@ -43,7 +43,9 @@ export class MenuComponent implements OnInit {
       once: true
     });
 
+    this.modalOpen = false;
     this.isMobileViewService.isMobileView$.subscribe((isMobileView) => {
+      console.log('modalOpen', this.modalOpen)
       if (this.isMobileView !== isMobileView) {
         this.isMobileView = isMobileView;
         if (this.modalOpen) {
@@ -71,7 +73,7 @@ export class MenuComponent implements OnInit {
   }
   
   openImageModal(index: number): void {
-    this.imageModal.imageUrl = this.isMobileView ? this.items[index].imageModalMobile :  this.items[index].imageModal;
+    this.imageModal.imageUrl = this.isMobileView ? this.items[index].imageModalMobile : this.items[index].imageModal;
     this.imageModal.index = index;
     const modalElement = document.getElementById(IMAGE_MODAL_ID);
     if (modalElement) {
