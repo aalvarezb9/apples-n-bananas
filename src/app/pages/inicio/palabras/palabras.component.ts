@@ -12,18 +12,14 @@ export class PalabrasComponent implements OnInit {
   private readonly isMobileService = inject(IsMobileService);
   backgroundRoot = '../../../../assets/images';
   background!: string;
+  isMobileView!: boolean;
 
   ngOnInit(): void {
     this.isMobileService.isMobileView$.subscribe((isMobileView) => {
-      this.background = this.getBackgroundStyle(isMobileView ? 'palabras_mobile' : 'palabras');
+      if (this.isMobileView !== isMobileView) {
+        this.isMobileView = isMobileView;
+        this.background = this.isMobileView ? 'palabras_mobile' : 'palabras';
+      }
     });
-  }
-
-  getBakgroundUrl(image: string): string {
-    return `${this.backgroundRoot}/${image}.png`;
-  }
-
-  getBackgroundStyle(image: string): string {
-    return `url("${this.getBakgroundUrl(image)}")`;
   }
 }
