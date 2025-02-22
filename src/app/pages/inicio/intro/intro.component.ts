@@ -32,6 +32,7 @@ export class IntroComponent implements OnInit {
   isLoadingImages = true;
 
   ngOnInit(): void {
+    this.empezarAnimacion();
     this.isMobileService.isMobileView$.subscribe((isMobileView) => {
       this.isMobileView = isMobileView;
     });
@@ -42,11 +43,9 @@ export class IntroComponent implements OnInit {
   }
 
   empezarAnimacion(): void {
-    this.showModal = false;
     this.textAnimationService.animateText(this.phrases).subscribe((text) => {
       this.currentText = text;
     });
-    this.modalCerrada.emit();
   }
 
 }

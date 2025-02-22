@@ -1,7 +1,7 @@
 <div class="intro" [ngStyle]="{ 'padding' : isMobileView ? '20vh 10% 0 10%' : '' }">
   <app-modal
     [show]="showModal"
-    (onClose)="this.empezarAnimacion()"
+    (onClose)="this.showModal = false; modalCerrada.emit();"
     [bgColor]="bgColor"
   >
     <img
