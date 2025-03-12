@@ -15,7 +15,9 @@ export class TextAnimationService {
 
   private animatePhrase(phrase: string): Observable<string> {
     const characters = phrase.split('');
-    const characterObservables = characters.map((char, index) => of(char).pipe(delay(20 * index)));
+    const totalDuration = 250;
+    const interval = characters.length > 1 ? totalDuration / (characters.length - 1) : totalDuration;
+    const characterObservables = characters.map((char, index) => of(char).pipe(delay(interval * index)));
     return concat(...characterObservables).pipe(
       map((_, index) => characters.slice(0, index + 1).join(''))
     );
