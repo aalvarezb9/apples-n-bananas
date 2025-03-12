@@ -38,7 +38,7 @@ export class IntroComponent implements OnInit {
     this.empezarAnimacion();
     this.isMobileService.isMobileView$.subscribe((isMobileView) => {
       this.isMobileView = isMobileView;
-      this.logoSrc.next(this.isMobileView ? `${this.BASE_LOGOS_SRC}/logo_mobile.png` : `${this.BASE_LOGOS_SRC}/logo_pc.png`);
+      this.logoSrc.next(this.isMobileView ? `${this.BASE_LOGOS_SRC}/LOGO_ApplesNBananas.png` : `${this.BASE_LOGOS_SRC}/logo_pc.png`);
     });
 
     this.imagesLoadedService.allImagesLoaded$.subscribe((allLoaded) => {
