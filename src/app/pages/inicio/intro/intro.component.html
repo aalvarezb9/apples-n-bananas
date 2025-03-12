@@ -14,8 +14,8 @@
   @defer {
   <div class="logo row mx-auto" data-aos="fade-down">
     <img
-      appImageLoader
-      src="../../../../assets/logos/logo_oficial.png"
+      *ngIf="logoSrc | async"
+      [src]="logoSrc | async"
       alt="Logo apples"
       [attr.height]="isMobileView ? '100' : '300'"
       [attr.width]="isMobileView ? '100' : '300'"
