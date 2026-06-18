@@ -22,7 +22,7 @@ export class FooterComponent {
     { label: 'Home', url: 'home', slide: true },
     { label: 'Nuestra Historia', url: 'nuestra-historia', slide: true },
     { label: 'Que ofrecemos', url: 'paquetes', slide: true },
-    { label: 'Paquetes', url: 'https://drive.google.com/file/d/1vRP_QCFkweeH65qGgKTYKXXC1PvyX3xx/view?usp=drive_link', slide: false },
+    { label: 'Paquetes', url: 'https://drive.google.com/file/d/1-6fkclIY3MNSF_u6yeXcOCq5XkELnvsx/view?usp=drive_link', slide: false },
   ];
 
   socials = [
