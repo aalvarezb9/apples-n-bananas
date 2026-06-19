@@ -8,6 +8,7 @@ frontend:
       commands:
         - npm run build
         - cp src/index.html dist/apples/index.html
+        - cp -r src/assets dist/apples/
   artifacts:
     baseDirectory: dist/apples
     files:
